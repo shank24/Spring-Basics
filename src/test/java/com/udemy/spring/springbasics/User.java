@@ -1,5 +1,10 @@
 package com.udemy.spring.springbasics;
 
+import org.springframework.stereotype.Component;
+
+//Autowired is telling that all those classes objects,
+// spring has to manage it.
+@Component
 public class User {
     private Address address;
     private Salary salary;
