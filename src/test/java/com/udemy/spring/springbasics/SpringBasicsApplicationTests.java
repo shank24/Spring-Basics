@@ -2,6 +2,7 @@ package com.udemy.spring.springbasics;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
@@ -12,9 +13,13 @@ class SpringBasicsApplicationTests {
 	@Autowired
 	private User user;
 
+	@Value("${PATH}")
+	private String path;
+
 	@Test
 	void contextLoads() {
-		user.printDetails();
+		System.out.println(this.path);
+		//user.printDetails();
 	}
 
 }
