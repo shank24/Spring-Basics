@@ -1,15 +1,16 @@
 package com.udemy.spring.springbasics;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.github.javafaker.Faker;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Salary {
-    @Value("${amount:200}")
-    private int amount;
+    @Autowired
+    private Faker faker;
 
     public int getAmount() {
-        return amount;
+        return this.faker.number().randomDigit();
     }
 
 }

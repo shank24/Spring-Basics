@@ -45,8 +45,8 @@ class SpringBasicsApplicationTests {
 		//Java 8 Way
 		forEachWay();
 		streamWay();*/
-		//user.printDetails();
-		System.out.println(faker.name().firstName());
+		user.printDetails();
+		//System.out.println(faker.name().firstName());
 	}
 
 	private void streamWay() {
