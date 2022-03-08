@@ -1,5 +1,6 @@
 package com.udemy.spring.springbasics;
 
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,10 +27,15 @@ class SpringBasicsApplicationTests {
 
 	@Value("${TEST_URL:https://www.google.com}")
 	private String url;
+
+	@Autowired
+	private Faker faker;
+
 	@Test
 	void contextLoads() {
-		//System.out.println(this.fruits);
-		/*System.out.println(this.url);
+		/*
+		System.out.println(this.fruits);
+		System.out.println(this.url);
 		System.out.println(this.fruits.size());
 		System.out.println(this.timeout);
 
@@ -39,7 +45,8 @@ class SpringBasicsApplicationTests {
 		//Java 8 Way
 		forEachWay();
 		streamWay();*/
-		user.printDetails();
+		//user.printDetails();
+		System.out.println(faker.name().firstName());
 	}
 
 	private void streamWay() {
