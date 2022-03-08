@@ -16,9 +16,12 @@ class SpringBasicsApplicationTests {
 	@Value("${PATH}")
 	private String path;
 
+	@Value("${fruits}")
+	private String fruits;
+
 	@Test
 	void contextLoads() {
-		System.out.println(this.path);
+		System.out.println(this.fruits);
 		//user.printDetails();
 	}
 
