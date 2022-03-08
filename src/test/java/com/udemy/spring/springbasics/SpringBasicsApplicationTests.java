@@ -29,7 +29,7 @@ class SpringBasicsApplicationTests {
 	@Test
 	void contextLoads() {
 		//System.out.println(this.fruits);
-		System.out.println(this.url);
+		/*System.out.println(this.url);
 		System.out.println(this.fruits.size());
 		System.out.println(this.timeout);
 
@@ -38,8 +38,8 @@ class SpringBasicsApplicationTests {
 
 		//Java 8 Way
 		forEachWay();
-		streamWay();
-		//user.printDetails();
+		streamWay();*/
+		user.printDetails();
 	}
 
 	private void streamWay() {
