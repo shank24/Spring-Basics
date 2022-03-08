@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 @SpringBootTest
 class SpringBasicsApplicationTests {
 
@@ -17,7 +19,7 @@ class SpringBasicsApplicationTests {
 	private String path;
 
 	@Value("${fruits}")
-	private String fruits;
+	private List<String> fruits;
 
 	@Test
 	void contextLoads() {
