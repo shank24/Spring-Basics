@@ -31,8 +31,14 @@ class SpringBasicsApplicationTests {
 	@Autowired
 	private Faker faker;
 
+	@Autowired
+	private Television tv;
+
 	@Test
-	void contextLoads() {
+	void contextLoads()  {
+		this.tv.playMovie();
+		//user.printDetails();
+
 		/*
 		System.out.println(this.fruits);
 		System.out.println(this.url);
@@ -44,9 +50,10 @@ class SpringBasicsApplicationTests {
 
 		//Java 8 Way
 		forEachWay();
-		streamWay();*/
-		user.printDetails();
-		//System.out.println(faker.name().firstName());
+		streamWay();
+
+		System.out.println(faker.name().firstName());
+		*/
 	}
 
 	private void streamWay() {
