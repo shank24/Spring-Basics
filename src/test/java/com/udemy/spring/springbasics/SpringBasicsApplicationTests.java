@@ -21,20 +21,39 @@ class SpringBasicsApplicationTests {
 	@Value("${fruits}")
 	private List<String> fruits;
 
+	@Value("${timeout}")
+	private int timeout;
+
+	@Value("${TEST_URL:https://www.google.com}")
+	private String url;
 	@Test
 	void contextLoads() {
 		//System.out.println(this.fruits);
+		System.out.println(this.url);
 		System.out.println(this.fruits.size());
+		System.out.println(this.timeout);
 
 		//Enhanced For Loop
+		enhancedWay();
+
+		//Java 8 Way
+		forEachWay();
+		streamWay();
+		//user.printDetails();
+	}
+
+	private void streamWay() {
+		fruits.stream().forEach(c -> System.out.println(c));
+	}
+
+	private void forEachWay() {
+		fruits.forEach(System.out::println);
+	}
+
+	private void enhancedWay() {
 		for (String value : fruits){
 			System.out.println(value);
 		}
-
-		//Java 8 Way
-		fruits.forEach(System.out::println);
-		fruits.stream().forEach(c -> System.out.println(c));
-		//user.printDetails();
 	}
 
 }
