@@ -23,7 +23,17 @@ class SpringBasicsApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println(this.fruits);
+		//System.out.println(this.fruits);
+		System.out.println(this.fruits.size());
+
+		//Enhanced For Loop
+		for (String value : fruits){
+			System.out.println(value);
+		}
+
+		//Java 8 Way
+		fruits.forEach(System.out::println);
+		fruits.stream().forEach(c -> System.out.println(c));
 		//user.printDetails();
 	}
 
