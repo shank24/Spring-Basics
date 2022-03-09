@@ -1,3 +1,4 @@
+/*
 package com.udemy.spring.springbasics;
 
 import com.github.javafaker.Faker;
@@ -8,9 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
-//@SpringBootTest
+@SpringBootTest
 
-/*class TestClass {
+class TestClass {
 
 	//@Autowired - is creating the object of the User class, with required
 	// Param Constructor.
@@ -33,9 +34,9 @@ import java.util.List;
 	private Faker faker;
 
 	@Autowired
-	private Television tv;*/
+	private Television tv;
 
-	/*
+
 	@Test
 	void contextLoads()  {
 		this.tv.playMovie();
@@ -74,6 +75,7 @@ import java.util.List;
 
 }
 */
+
 
 /**
  * 		Address address = new Address();
