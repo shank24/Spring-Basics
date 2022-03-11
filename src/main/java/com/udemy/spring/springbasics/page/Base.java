@@ -16,8 +16,11 @@ public abstract class Base {
     protected WebDriverWait webDriverWait;
 
     @PostConstruct
-    private void init(){
+    private void init()
+    {
         PageFactory.initElements(this.driver,this);
+
     }
+
     public abstract boolean isAt();
 }
