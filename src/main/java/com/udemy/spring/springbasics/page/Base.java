@@ -9,9 +9,11 @@ import javax.annotation.PostConstruct;
 
 public abstract class Base {
 
+    //Objects instantiation
     @Autowired
     protected WebDriver driver;
 
+    //Objects instantiation
     @Autowired
     protected WebDriverWait webDriverWait;
 
