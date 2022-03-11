@@ -4,9 +4,11 @@ import com.udemy.spring.springbasics.page.Base;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class SearchComponent extends Base {
 
     @FindBy(name="q")
@@ -26,6 +28,8 @@ public class SearchComponent extends Base {
     }
     @Override
     public boolean isAt() {
-        return this.webDriverWait.until((d) -> this.searchBox.isDisplayed() )
+        return this.
+                webDriverWait.
+                until((d) -> this.searchBox.isDisplayed());
     }
 }
