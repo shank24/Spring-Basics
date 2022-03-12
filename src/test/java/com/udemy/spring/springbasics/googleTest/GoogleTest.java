@@ -19,8 +19,6 @@ public class GoogleTest extends SpringBaseTestNGTest {
     @Autowired
     private ScreenShotUtil screenShotUtil;
 
-
-
     @Test
     public void googleTest() throws IOException {
         this.googlePage.goTo();
