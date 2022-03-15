@@ -1,5 +1,8 @@
 package com.udemy.spring.springbasics.condition;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Civic implements Car {
 
     @Override
