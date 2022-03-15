@@ -1,8 +1,10 @@
 package com.udemy.spring.springbasics.condition;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.stereotype.Component;
 
 @Component
+@ConditionalOnExpression("${car.speed} < 70")
 public class Civic implements Car {
 
     @Override
