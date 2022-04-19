@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.PostConstruct;
 
+
 public abstract class Base {
 
     //Objects instantiation
@@ -21,7 +22,6 @@ public abstract class Base {
     private void init()
     {
         PageFactory.initElements(this.driver,this);
-
     }
 
     public abstract boolean isAt();
