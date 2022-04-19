@@ -42,7 +42,7 @@ public class WebDriverConfig {
     }
 
     @Bean
-    public WebDriverWait WebDriverWait(WebDriver driver) {
+    public WebDriverWait webDriverWait(WebDriver driver) {
         return new WebDriverWait(driver, this.timeout);
     }
 }
