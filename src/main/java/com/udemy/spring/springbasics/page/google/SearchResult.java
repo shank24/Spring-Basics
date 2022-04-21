@@ -16,6 +16,7 @@ public class SearchResult extends Base {
     public int getCount(){
         return this.results.size();
     }
+
     @Override
     public boolean isAt() {
         return this.webDriverWait.until((d) -> !this.results.isEmpty());
