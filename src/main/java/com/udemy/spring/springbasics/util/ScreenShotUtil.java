@@ -20,7 +20,7 @@ public class ScreenShotUtil {
     @Autowired
     private TakesScreenshot driver;
 
-    @Value("${screenshot.path}/img.png")
+    @Value("${screenshot.path}")
     private Path path;
 
 
@@ -36,8 +36,8 @@ public class ScreenShotUtil {
         }
     }
 
-    public void takeScreenshot() throws IOException {
+    public void takeScreenshot(final String imgName ) throws IOException {
         File sourceFile = this.driver.getScreenshotAs(OutputType.FILE);
-        FileCopyUtils.copy(sourceFile, this.path.toFile());
+        FileCopyUtils.copy(sourceFile, this.path.resolve(imgName).toFile());
     }
 }
