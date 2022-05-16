@@ -1,5 +1,8 @@
 package com.udemy.spring.springbasics.dependency_demo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class User {
 
     private Address address;
