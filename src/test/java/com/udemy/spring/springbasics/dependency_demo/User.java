@@ -6,11 +6,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class User {
 
+    private Address address;
+    private Salary salary;
+
+    //Setter Approach
     @Autowired
-    Address address;
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 
     @Autowired
-    Salary salary;
+    public void setSalary(Salary salary) {
+        this.salary = salary;
+    }
 
     /*public User(Address address, Salary salary) {
         this.address = address;
