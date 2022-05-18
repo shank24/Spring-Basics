@@ -13,7 +13,7 @@ class SpringBasicsApplicationTests {
 	@Autowired
 	User user;
 	
-	@Value("PATH")
+	@Value("${PATH}")
 	private String path;
 
 	@Test
