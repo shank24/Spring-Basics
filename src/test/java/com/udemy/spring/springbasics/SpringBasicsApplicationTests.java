@@ -26,9 +26,10 @@ class SpringBasicsApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println(this.fruit);
+		/*System.out.println(this.fruit);
 		System.out.println(this.url);
-		//user.printDetails();
+		*/
+		user.printDetails();
 	}
 
 
