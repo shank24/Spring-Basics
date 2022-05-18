@@ -1,5 +1,6 @@
 package com.udemy.spring.springbasics;
 
+import com.github.javafaker.Faker;
 import com.udemy.spring.springbasics.dependency_demo.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +14,12 @@ class SpringBasicsApplicationTests {
 
 	
 	@Autowired
-	User user;
+	private User user;
 
-	@Value("${TEST_URL:www.example.com}")
+	@Autowired
+	private Faker faker;
+
+	/*@Value("${TEST_URL:www.example.com}")
 	private String url;
 
 	@Value("${fruits}")
@@ -23,13 +27,16 @@ class SpringBasicsApplicationTests {
 
 	@Value("${PATH}")
 	private String path;
-
+*/
 	@Test
 	void contextLoads() {
-		/*System.out.println(this.fruit);
+
+		user.printDetails();
+		System.out.println(faker.name().firstName());
+		/*
+		System.out.println(this.fruit);
 		System.out.println(this.url);
 		*/
-		user.printDetails();
 	}
 
 
