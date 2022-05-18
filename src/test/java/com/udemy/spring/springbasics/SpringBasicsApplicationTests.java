@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 @SpringBootTest
 class SpringBasicsApplicationTests {
 
@@ -13,8 +15,11 @@ class SpringBasicsApplicationTests {
 	@Autowired
 	User user;
 
+	@Value("${TEST_URL:www.example.com}")
+	private String url;
+
 	@Value("${fruits}")
-	private String fruit;
+	private List<String> fruit;
 
 	@Value("${PATH}")
 	private String path;
@@ -22,7 +27,7 @@ class SpringBasicsApplicationTests {
 	@Test
 	void contextLoads() {
 		System.out.println(this.fruit);
-
+		System.out.println(this.url);
 		//user.printDetails();
 	}
 
