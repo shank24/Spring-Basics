@@ -12,13 +12,16 @@ class SpringBasicsApplicationTests {
 	
 	@Autowired
 	User user;
-	
+
+	@Value("${fruits}")
+	private String fruit;
+
 	@Value("${PATH}")
 	private String path;
 
 	@Test
 	void contextLoads() {
-		System.out.println(this.path);
+		System.out.println(this.fruit);
 
 		//user.printDetails();
 	}
