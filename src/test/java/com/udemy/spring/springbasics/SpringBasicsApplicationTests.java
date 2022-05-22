@@ -33,13 +33,14 @@ class SpringBasicsApplicationTests {
 
 		user.printDetails();
 		System.out.println(faker.name().firstName());
-		/*
-		System.out.println(this.fruit);
-		System.out.println(this.url);
-		*/
+
 	}
 
 
+	/*
+		System.out.println(this.fruit);
+		System.out.println(this.url);
+		*/
 
 	/*
 	Address address = new Address();

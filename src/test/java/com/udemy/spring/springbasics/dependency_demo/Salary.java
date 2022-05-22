@@ -1,16 +1,18 @@
 package com.udemy.spring.springbasics.dependency_demo;
 
+import com.github.javafaker.Faker;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Salary {
 
-    @Value("${amount:1001}")
-    private int amount;
+    @Autowired
+    private Faker faker;
 
     public int getAmount() {
-        return amount;
+        return this.faker.number().randomDigit();
     }
 }
 
