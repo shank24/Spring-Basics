@@ -16,33 +16,17 @@ import org.springframework.context.annotation.Primary;
 /*
 This class is used for creating WebDriver Config.
  */
-@Lazy
-@Configuration
+
 public class WebDriverConfig {
 
-    @Value("${default.timeout:30}")
-    private int timeout;
-
-
-    @Bean
-    @ConditionalOnProperty(name = "browser", havingValue = "firefox")
     public WebDriver firefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
     }
 
-    //@Primary
-    @Bean
-    //@ConditionalOnProperty(name= "browser", havingValue="chrome")
-    @ConditionalOnMissingBean
-    //This Missing Bean prop should be at last
     public WebDriver chromeDriver() {
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver();
     }
 
-    @Bean
-    public WebDriverWait webDriverWait(WebDriver driver) {
-        return new WebDriverWait(driver, this.timeout);
-    }
 }
