@@ -19,14 +19,22 @@ This class is used for creating WebDriver Config.
 
 public class WebDriverConfig {
 
+    @Value("${default.timeout:25}")
+    private int timeOut;
+
     public WebDriver firefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
     }
 
+    @Bean
     public WebDriver chromeDriver() {
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver();
     }
 
+    @Bean
+    public WebDriverWait webDriverWait(WebDriver driver){
+        return new WebDriverWait(driver,this.timeOut);
+    }
 }
