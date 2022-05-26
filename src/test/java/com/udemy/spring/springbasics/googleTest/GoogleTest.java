@@ -22,14 +22,18 @@ public class GoogleTest extends SpringBaseTestNGTest {
 
     @Test
     public void googleTest() throws IOException {
+
+        //Asserting On Google Page
         this.googlePage.goTo();
         Assert.assertTrue(this.googlePage.isAt());
 
+        //Asserting On SearchResult Page
         this.googlePage.getSearchComponent().search("hello");
         Assert.assertTrue(this.googlePage.getSearchResult().isAt());
+
+        //Asserting On Search Count
         Assert.assertTrue(this.googlePage.getSearchResult().getCount() > 2);
         this.screenShotUtil.takeScreenshot("img.jpg");
-
         this.googlePage.tearDown();
     }
 }

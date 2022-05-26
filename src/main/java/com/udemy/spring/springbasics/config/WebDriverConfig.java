@@ -16,12 +16,13 @@ import org.springframework.context.annotation.Primary;
 /*
 This class is used for creating WebDriver Config.
  */
-
+@Configuration
 public class WebDriverConfig {
 
     @Value("${default.timeout:25}")
     private int timeOut;
 
+    //@Bean
     public WebDriver firefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
