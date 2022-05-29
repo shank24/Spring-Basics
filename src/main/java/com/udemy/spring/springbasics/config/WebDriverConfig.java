@@ -23,13 +23,14 @@ public class WebDriverConfig {
     @Value("${default.timeout:25}")
     private int timeOut;
 
-    //@Bean
+    @Bean
     public WebDriver firefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
     }
 
     @Bean
+    @Primary
     public WebDriver chromeDriver() {
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver();
