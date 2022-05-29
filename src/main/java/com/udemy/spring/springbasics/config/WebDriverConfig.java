@@ -24,6 +24,7 @@ public class WebDriverConfig {
     private int timeOut;
 
     @Bean
+    @ConditionalOnProperty(name="browser", havingValue = "firefox")
     public WebDriver firefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
@@ -31,6 +32,7 @@ public class WebDriverConfig {
 
     @Bean
     @Primary
+    @ConditionalOnProperty(name="browser", havingValue = "chrome")
     public WebDriver chromeDriver() {
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver();
