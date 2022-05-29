@@ -21,9 +21,6 @@ public class RemoteWebDriverConfig {
     @Value("${selenium.grid.url}")
     private URL url;
 
-    @Value("${default.timeout:25}")
-    private int timeOut;
-
     @Bean
     @ConditionalOnProperty(name="browser", havingValue="chrome")
     public WebDriver remoteChromeDriver(){
@@ -36,9 +33,4 @@ public class RemoteWebDriverConfig {
         return new RemoteWebDriver(this.url, DesiredCapabilities.firefox());
     }
 
-    @Bean
-    public WebDriverWait webDriverWait(WebDriver driver)
-    {
-        return new WebDriverWait(driver,this.timeOut);
-    }
 }

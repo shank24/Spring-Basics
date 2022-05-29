@@ -18,8 +18,7 @@ This class is used for creating WebDriver Config.
 @Profile("!remote")
 public class WebDriverConfig {
 
-    @Value("${default.timeout:25}")
-    private int timeOut;
+
 
     @Bean
     @ConditionalOnProperty(name="browser", havingValue = "firefox")
@@ -38,9 +37,4 @@ public class WebDriverConfig {
         return new ChromeDriver();
     }
 
-    @Bean
-    public WebDriverWait webDriverWait(WebDriver driver)
-    {
-        return new WebDriverWait(driver,this.timeOut);
-    }
 }
