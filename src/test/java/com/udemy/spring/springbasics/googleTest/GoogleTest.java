@@ -1,5 +1,6 @@
 package com.udemy.spring.springbasics.googleTest;
 
+import com.google.common.util.concurrent.Uninterruptibles;
 import com.udemy.spring.springbasics.SpringBaseTestNGTest;
 import com.udemy.spring.springbasics.page.google.GooglePage;
 import com.udemy.spring.springbasics.util.ScreenShotUtil;
@@ -9,6 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 //Google Page Imp
 public class GoogleTest extends SpringBaseTestNGTest {
@@ -27,8 +29,10 @@ public class GoogleTest extends SpringBaseTestNGTest {
         this.googlePage.goTo();
         Assert.assertTrue(this.googlePage.isAt());
 
+        Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
+
         //Asserting On SearchResult Page
-        this.googlePage.getSearchComponent().search("hello");
+        this.googlePage.getSearchComponent().search("environment ");
         Assert.assertTrue(this.googlePage.getSearchResult().isAt());
 
         //Asserting On Search Count
