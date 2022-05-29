@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.util.FileCopyUtils;
-
 import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 
-//@Lazy
+//This will create the Bean, only if it is invoked or needed.
+@Lazy
 @Component
 public class ScreenShotUtil {
 

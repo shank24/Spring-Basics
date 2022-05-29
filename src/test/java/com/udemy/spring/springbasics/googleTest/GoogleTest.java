@@ -16,7 +16,7 @@ public class GoogleTest extends SpringBaseTestNGTest {
     @Autowired
     private GooglePage googlePage;
 
-    //@Lazy
+    @Lazy
     @Autowired
     private ScreenShotUtil screenShotUtil;
 
@@ -35,7 +35,7 @@ public class GoogleTest extends SpringBaseTestNGTest {
         Assert.assertTrue(this.googlePage.getSearchResult().getCount() > 2);
 
         //Taking Screenshot
-        this.screenShotUtil.takeScreenshot("img.jpg");
+        //this.screenShotUtil.takeScreenshot("img.jpg");
         this.googlePage.tearDown();
     }
 }
