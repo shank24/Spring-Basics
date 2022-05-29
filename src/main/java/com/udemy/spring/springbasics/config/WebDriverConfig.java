@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Primary;
 /*
 This class is used for creating WebDriver Config.
  */
+@Lazy
 @Configuration
 public class WebDriverConfig {
 
