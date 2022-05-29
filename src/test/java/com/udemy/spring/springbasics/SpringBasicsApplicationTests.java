@@ -14,7 +14,7 @@ class SpringBasicsApplicationTests {
 	@Test
 	void contextLoads() {
 
-		this.tv.playMovie();
+		//this.tv.playMovie();
 
 		/*user.printDetails();
 		System.out.println(faker.name().firstName());*/
