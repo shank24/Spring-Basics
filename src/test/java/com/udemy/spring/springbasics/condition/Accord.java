@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 //@ConditionalOnExpression("${car.speed} >= 70")
+//For specific type, we can use @Qualifier approach
 @Qualifier("accord")
 public class Accord implements Car {
 
