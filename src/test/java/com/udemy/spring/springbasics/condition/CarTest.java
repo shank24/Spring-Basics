@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class CarTest extends SpringBaseTestNGTest {
 
-    @Qualifier("accord")
+    @Qualifier("civic")
     @Autowired
     private Car car;
 
