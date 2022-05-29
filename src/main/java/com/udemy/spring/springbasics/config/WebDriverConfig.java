@@ -31,8 +31,10 @@ public class WebDriverConfig {
     }
 
     @Bean
-    @Primary
-    @ConditionalOnProperty(name="browser", havingValue = "chrome")
+    //@Primary
+    //The below property should be last in sequence.
+    @ConditionalOnMissingBean
+    //@ConditionalOnProperty(name="browser", havingValue = "chrome")
     public WebDriver chromeDriver() {
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver();
