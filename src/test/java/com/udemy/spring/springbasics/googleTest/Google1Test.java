@@ -1,6 +1,5 @@
 package com.udemy.spring.springbasics.googleTest;
 
-import com.google.common.util.concurrent.Uninterruptibles;
 import com.udemy.spring.springbasics.SpringBaseTestNGTest;
 import com.udemy.spring.springbasics.config.WebDriverFactory;
 import com.udemy.spring.springbasics.page.google.GooglePage;
@@ -13,7 +12,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 //Google Page Imp
-public class GoogleTest extends SpringBaseTestNGTest {
+public class Google1Test extends SpringBaseTestNGTest {
 
     @Autowired
     private GooglePage googlePage;
@@ -35,7 +34,7 @@ public class GoogleTest extends SpringBaseTestNGTest {
         Assert.assertTrue(this.googlePage.isAt());
 
         //Asserting On SearchResult Page
-        this.googlePage.getSearchComponent().search("selenium ");
+        this.googlePage.getSearchComponent().search("spring boot ");
         Assert.assertTrue(this.googlePage.getSearchResult().isAt());
 
         //Asserting On Search Count
