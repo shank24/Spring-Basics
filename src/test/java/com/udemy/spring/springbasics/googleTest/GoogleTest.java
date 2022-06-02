@@ -2,6 +2,7 @@ package com.udemy.spring.springbasics.googleTest;
 
 import com.google.common.util.concurrent.Uninterruptibles;
 import com.udemy.spring.springbasics.SpringBaseTestNGTest;
+import com.udemy.spring.springbasics.config.WebDriverFactory;
 import com.udemy.spring.springbasics.page.google.GooglePage;
 import com.udemy.spring.springbasics.util.ScreenShotUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 //Google Page Imp
 public class GoogleTest extends SpringBaseTestNGTest {
@@ -22,14 +22,17 @@ public class GoogleTest extends SpringBaseTestNGTest {
     @Autowired
     private ScreenShotUtil screenShotUtil;
 
+    @Autowired
+    private WebDriverFactory driverFactory;
+
+
     @Test
     public void googleTest() throws IOException {
 
         //Asserting On Google Page
+        //this.driverFactory.getWebDriver("chrome");
         this.googlePage.goTo();
         Assert.assertTrue(this.googlePage.isAt());
-
-        //Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
 
         //Asserting On SearchResult Page
         this.googlePage.getSearchComponent().search("fitness ");

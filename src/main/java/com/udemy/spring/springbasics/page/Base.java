@@ -1,5 +1,6 @@
 package com.udemy.spring.springbasics.page;
 
+import com.udemy.spring.springbasics.config.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,6 +18,7 @@ public abstract class Base {
     //Objects instantiation
     @Autowired
     protected WebDriverWait webDriverWait;
+
 
     @PostConstruct
     private void init()

@@ -18,8 +18,9 @@ public class GooglePage extends Base {
     private String url;
 
     public  void goTo(){
+
         this.driver.get(url);
-        //this.driver.manage().window().maximize();
+        this.driver.manage().window().maximize();
     }
 
     public  void tearDown(){
