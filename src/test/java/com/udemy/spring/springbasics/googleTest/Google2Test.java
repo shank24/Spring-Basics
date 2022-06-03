@@ -1,6 +1,5 @@
 package com.udemy.spring.springbasics.googleTest;
 
-import com.google.common.util.concurrent.Uninterruptibles;
 import com.udemy.spring.springbasics.SpringBaseTestNGTest;
 import com.udemy.spring.springbasics.config.WebDriverFactory;
 import com.udemy.spring.springbasics.page.google.GooglePage;
@@ -13,7 +12,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 //Google Page Imp
-public class GoogleTest extends SpringBaseTestNGTest {
+public class Google2Test extends SpringBaseTestNGTest {
 
     @Autowired
     private GooglePage googlePage;
