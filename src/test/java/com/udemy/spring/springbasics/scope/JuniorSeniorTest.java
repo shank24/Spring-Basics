@@ -20,6 +20,7 @@ public class JuniorSeniorTest extends SpringBaseTestNGTest {
         seniorEng.setAmount(500);
         System.out.println("Senior :: " + this.seniorEng.getSalary().getAmount());
 
+        System.out.println("Junior :: " + this.juniorEng.getSalary().getAmount());
 
     }
 }

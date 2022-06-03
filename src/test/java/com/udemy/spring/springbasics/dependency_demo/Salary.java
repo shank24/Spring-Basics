@@ -1,3 +1,4 @@
+/*
 package com.udemy.spring.springbasics.dependency_demo;
 
 import com.github.javafaker.Faker;
@@ -18,3 +19,4 @@ public class Salary {
 
 
 
+*/

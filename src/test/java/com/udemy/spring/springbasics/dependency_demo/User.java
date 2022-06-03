@@ -9,9 +9,9 @@ public class User {
     @Autowired
     private Address address;
 
-    @Autowired
+    /*@Autowired
     private Salary salary;
-
+*/
     //Setter Approach
     /*public void setAddress(Address address) {
         this.address = address;
@@ -28,7 +28,7 @@ public class User {
 
     public void printDetails(){
         System.out.println("Address  :" +  this.address.getStreet());
-        System.out.println("Salary   :" + this.salary.getAmount());
+        //System.out.println("Salary   :" + this.salary.getAmount());
     }
 
 
