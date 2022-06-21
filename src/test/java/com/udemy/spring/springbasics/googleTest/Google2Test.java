@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-//Google Page Imp
+//Google2 Page Imp
 public class Google2Test extends SpringBaseTestNGTest {
 
     @Autowired
