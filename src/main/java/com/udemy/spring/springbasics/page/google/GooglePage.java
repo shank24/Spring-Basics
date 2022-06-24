@@ -1,10 +1,11 @@
 package com.udemy.spring.springbasics.page.google;
 
+import com.udemy.spring.springbasics.annotation.Page;
 import com.udemy.spring.springbasics.page.Base;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
-
+@Page
 public class GooglePage extends Base {
 
     @Autowired
