@@ -3,9 +3,8 @@ package com.udemy.spring.springbasics.page.google;
 import com.udemy.spring.springbasics.page.Base;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
+
 public class GooglePage extends Base {
 
     @Autowired

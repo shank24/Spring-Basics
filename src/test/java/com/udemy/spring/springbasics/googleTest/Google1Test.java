@@ -13,7 +13,6 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 //Google1 Page Imp
-@Component
 public class Google1Test extends SpringBaseTestNGTest {
 
     @Autowired
