@@ -24,7 +24,7 @@ public class WebDriverConfig {
     }
 
     @Bean
-    @Scope("prototype")
+    @Scope("browserscope")
     //@Primary
     //The below property should be last in sequence.
     @ConditionalOnMissingBean
