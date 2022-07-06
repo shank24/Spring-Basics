@@ -12,7 +12,10 @@ public class BrowserScope extends SimpleThreadScope {
     @Override
     public Object get(String name, ObjectFactory<?> objectFactory) {
         Object o =  super.get(name, objectFactory);
+        //If session ID is not null -->
         SessionId sessionId = ((RemoteWebDriver)o).getSessionId();
+
+        //If session ID is null -->
         if(Objects.isNull(sessionId)){
             super.remove(name);
             o = super.get(name,objectFactory);
