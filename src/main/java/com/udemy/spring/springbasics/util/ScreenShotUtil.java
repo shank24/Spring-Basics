@@ -1,5 +1,6 @@
 package com.udemy.spring.springbasics.util;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,9 @@ public class ScreenShotUtil {
     @Value("${screenshot.path}")
     private Path path;
 
+    @Autowired
+    private Faker faker;
+
 
     @PostConstruct
     private void init(){
@@ -36,8 +40,8 @@ public class ScreenShotUtil {
         }
     }
 
-    public void takeScreenshot(final String imgName ) throws IOException {
+    public void takeScreenshot() throws IOException {
         File sourceFile = this.driver.getScreenshotAs(OutputType.FILE);
-        FileCopyUtils.copy(sourceFile, this.path.resolve(imgName).toFile());
+        FileCopyUtils.copy(sourceFile, this.path.resolve(faker.name().firstName() + ".png").toFile());
     }
 }
