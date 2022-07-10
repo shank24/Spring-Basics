@@ -20,7 +20,7 @@ import java.nio.file.Path;
 public class ScreenShotUtil {
 
     @Autowired
-    private ApplicationContext driver;
+    private ApplicationContext ctx;
 
     @Value("${screenshot.path}")
     private Path path;
@@ -42,7 +42,7 @@ public class ScreenShotUtil {
     }
 
     public void takeScreenshot() throws IOException {
-        File sourceFile = this.driver.getScreenshotAs(OutputType.FILE);
+        File sourceFile = this.ctx.getBean(TakesScreenshot.class).getScreenshotAs(OutputType.FILE);
         FileCopyUtils.copy(sourceFile, this.path.resolve(faker.name().firstName() + ".png").toFile());
     }
 }
