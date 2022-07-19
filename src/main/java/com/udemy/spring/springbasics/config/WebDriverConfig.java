@@ -17,7 +17,7 @@ This class is used for creating WebDriver Config.
 public class WebDriverConfig {
 
     @Bean
-    @ConditionalOnProperty(name="browser", havingValue = "firefox")
+    //@ConditionalOnProperty(name="browser", havingValue = "firefox")
     public WebDriver firefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
