@@ -1,4 +1,4 @@
-package com.udemy.spring.springbasics.config;
+package com.udemy.spring.springbasics.kelvin.scope;
 
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.context.annotation.Bean;

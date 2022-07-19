@@ -1,4 +1,4 @@
-package com.udemy.spring.springbasics.annotation;
+package com.udemy.spring.springbasics.kelvin.annotation;
 
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;

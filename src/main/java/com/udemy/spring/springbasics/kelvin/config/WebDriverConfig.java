@@ -1,6 +1,7 @@
-package com.udemy.spring.springbasics.config;
+package com.udemy.spring.springbasics.kelvin.config;
 
-import com.udemy.spring.springbasics.annotation.LazyConfiguration;
+import com.udemy.spring.springbasics.kelvin.annotation.LazyConfiguration;
+import com.udemy.spring.springbasics.kelvin.annotation.ThreadScopeBean;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,18 +17,16 @@ This class is used for creating WebDriver Config.
 @Profile("!remote")
 public class WebDriverConfig {
 
-    @Bean
-    //@ConditionalOnProperty(name="browser", havingValue = "firefox")
+    @ThreadScopeBean
+    @ConditionalOnProperty(name="browser", havingValue = "firefox")
     public WebDriver firefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
     }
 
-    @Bean
-    @Scope("browserscope")
-    //@Primary
-    //The below property should be last in sequence.
-    //@ConditionalOnMissingBean
+
+    @ThreadScopeBean
+    @ConditionalOnMissingBean
     //@ConditionalOnProperty(name="browser", havingValue = "chrome")
     public WebDriver chromeDriver() {
         WebDriverManager.chromedriver().setup();

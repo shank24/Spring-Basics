@@ -1,6 +1,6 @@
 package com.udemy.spring.springbasics.page.google;
 
-import com.udemy.spring.springbasics.annotation.Page;
+import com.udemy.spring.springbasics.kelvin.annotation.Page;
 import com.udemy.spring.springbasics.page.Base;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,7 +18,6 @@ public class GooglePage extends Base {
     private String url;
 
     public  void goTo(){
-
         this.driver.get(url);
         this.driver.manage().window().maximize();
     }

@@ -1,9 +1,9 @@
 package com.udemy.spring.springbasics.googleTest;
 
 import com.udemy.spring.springbasics.SpringBaseTestNGTest;
-import com.udemy.spring.springbasics.config.WebDriverFactory;
+import com.udemy.spring.springbasics.kelvin.config.WebDriverFactory;
 import com.udemy.spring.springbasics.page.google.GooglePage;
-import com.udemy.spring.springbasics.util.ScreenShotUtil;
+import com.udemy.spring.springbasics.kelvin.service.ScreenshotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.testng.Assert;
@@ -19,7 +19,7 @@ public class Google1Test extends SpringBaseTestNGTest {
 
     @Lazy
     @Autowired
-    private ScreenShotUtil screenShotUtil;
+    private ScreenshotService screenShotUtil;
 
     @Autowired
     private WebDriverFactory driverFactory;

@@ -1,4 +1,4 @@
-package com.udemy.spring.springbasics.config;
+package com.udemy.spring.springbasics.kelvin.config;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

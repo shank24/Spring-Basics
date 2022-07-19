@@ -1,4 +1,4 @@
-package com.udemy.spring.springbasics.config;
+package com.udemy.spring.springbasics.kelvin.scope;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
